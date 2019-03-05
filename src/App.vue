@@ -1,28 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <v-app dark>
+      <v-layout align-center justify-center row fill-height>
+        <v-flex xs8>
+          <Header/>
+          <v-content>
+            <v-container>
+              <router-view></router-view>
+            </v-container>
+          </v-content>
+        </v-flex>
+      </v-layout>
+    </v-app>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import Header from '@/components/Header.vue'
 
 export default {
-  name: 'app',
   components: {
-    HelloWorld,
+    Header
   },
-};
-</script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  metaInfo: {
+    title: 'noscreens.today',
+    titleTemplate: '%s | Florida State Park Database',
+    meta: [
+      {
+        name: 'description',
+        content: 'noscreens.today is a free tool that provides you with a simple database of Florida state parks for weekend day escapes. No fluff. Just parks and their info.'
+      }
+    ]
+  },
 }
-</style>
+</script>
