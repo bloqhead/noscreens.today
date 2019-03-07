@@ -2,7 +2,7 @@
   <div id="app">
     <v-app dark>
       <v-layout align-center justify-center row fill-height>
-        <v-flex xs8>
+        <v-flex xs12 m6>
           <Header/>
           <v-content>
             <v-container>
